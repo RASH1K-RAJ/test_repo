@@ -1,0 +1,45 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    border: 4px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.container{
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    margin: 10px 20px;
+    flex: 1 1 auto; /*Is a flex-item property.*/
+}
+
+.horizontal{
+    margin: 0px;
+    height: 200px; 
+    width: 70%;
+    display: flex;
+    align-content: center;
+    /*Here you'll notice that neither of the stretch will show effect
+    that is because height and width of a flex-item takes precedence if
+    explicitly mentioned in the items. Hence any property altered by the
+    flex attributes of the container can be overriden if it is specificaly
+    mentioned in the item itself. */
+    justify-content: stretch;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.inside{
+    background-color: red;
+    height: 100px;
+    width: 200px;
+    /* flex: 1; */
+}
